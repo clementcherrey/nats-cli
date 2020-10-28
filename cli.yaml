@@ -1,0 +1,23 @@
+name: nats-cli
+version: "1.0"
+author: Clement C. <clement.cherrey@gmail.com>
+about: Subscibe, publish and send request to a NATS instance
+args:
+    - VERB:
+        about: Sets the action to take
+        required: true
+        index: 1
+    - SUBJECT:
+        about: Sets the action to take
+        required: true
+        index: 2
+    - MESSAGE:
+        about: Sets the action to take
+        required: false
+        index: 3
+    - host:
+        short: h
+        long: host
+        value_name: HOST
+        about: Sets a NATS host
+        takes_value: true
