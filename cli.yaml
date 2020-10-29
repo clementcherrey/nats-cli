@@ -8,11 +8,11 @@ args:
         required: true
         index: 1
     - SUBJECT:
-        about: Sets the action to take
+        about: Sets the subject
         required: true
         index: 2
     - MESSAGE:
-        about: Sets the action to take
+        about: Sets the message to publish
         required: false
         index: 3
     - host:
