@@ -1,5 +1,6 @@
 use clap::{load_yaml, App};
 use nats;
+use std::time::Duration;
 
 const DEFAULT_HOST: &str = "127.0.0.1";
 
@@ -39,7 +40,7 @@ fn publish(nc: &nats::Connection, subject: &str, message: &str) {
         println!("no valid message provided")
     } else {
         nc.publish(&subject, &message).unwrap();
-        std::thread::sleep_ms(100);
+        std::thread::sleep(Duration::from_millis(100));
         println!("message published")
     }
 }
